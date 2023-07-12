@@ -1,5 +1,13 @@
 import { useState } from "react";
 import { FiDownload, FiHeart, FiShoppingCart, FiUser } from "react-icons/fi";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Button,
+} from "@mui/material";
 import "./App.css";
 import logo from "./assets/MEDDTODAY@2x.png";
 import health from "./assets/954528 (1)@2x.png";
@@ -29,15 +37,23 @@ const App = () => {
   return (
     <div>
       <header className="header-section">
-        <div className="header-content">
-          <h1 className="header-text">
-            MEDICINE | COVID-19 | AYUSH | AYURVEDA | CARE PLAN | need Help ?
-          </h1>
-          <div className="icons">
-            <FiDownload className="app-img" />
-            <FiHeart className="heart-img" />
-            <FiShoppingCart className="profile-img" />
-            <FiUser className="profile-img" />
+        <div className="div">
+          <div className="header-content">
+            <h1 className="header-text">
+              <span>MEDICINE |</span>
+              <span> COVID-19 |</span>
+              <span>MEDICINE |</span>
+              <span> AYUSH |</span>
+              <span> AYURVEDA |</span>
+              <span> CARE PLAN | </span>
+              <span>Need Help ?</span>
+            </h1>
+            <div className="icons">
+              <FiDownload className="app-img" />
+              <FiHeart className="heart-img" />
+              <FiShoppingCart className="profile-img" />
+              <FiUser className="profile-img" />
+            </div>
           </div>
         </div>
       </header>
@@ -47,24 +63,36 @@ const App = () => {
             <img src={logo} alt="logo" className="logo" />
           </div>
           <div className="location">
-            <select
-              value={location}
-              onChange={handleLocationChange}
-              className="location-select"
-            >
-              <option value="Chennai">Chennai</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Delhi">Delhi</option>
-              {/* Add more location options as needed */}
-            </select>
-            <input
+            <FormControl variant="outlined" className="location-select">
+              <InputLabel id="location-label">Location</InputLabel>
+              <Select
+                labelId="location-label"
+                value={location}
+                onChange={handleLocationChange}
+                label="Location"
+              >
+                <MenuItem value="Chennai">Chennai</MenuItem>
+                <MenuItem value="Mumbai">Mumbai</MenuItem>
+                <MenuItem value="Delhi">Delhi</MenuItem>
+                {/* Add more location options as needed */}
+              </Select>
+            </FormControl>
+            <TextField
               type="text"
-              placeholder="Search for Modicicines and Health Products"
+              placeholder="Search for Medicines and Health Products"
               value={searchInput}
               onChange={handleSearchChange}
               className="search-input"
+              variant="outlined"
+              size="small"
             />
-            <img src="search-icon.png" alt="Search" className="search-icon" />
+            <Button
+              variant="contained"
+              color="primary"
+              className="search-button"
+            >
+              Upload Now
+            </Button>
           </div>
         </div>
       </header>
@@ -84,16 +112,22 @@ const App = () => {
           </ul>
         </div>
       </header>
-      <section className="hero-section">
+      <div className="hero-section">
         <img src={hero1} alt="Image" className="hero-image" />
-
-        <p className="hero-text">FLAT 25% OFF MEDICINE</p>
-        <ul className="hero-list">
-          <li>Upload valid prescription</li>
-          <li>Receive a confirmation</li>
-          <li>Delivery at your doorstep</li>
-        </ul>
-      </section>
+        <div className="hero-text">
+          <h3>
+            <span>FLAT 25% OFF</span>
+          </h3>
+          <h3>
+            <span>on MEDICINE order</span>
+          </h3>
+          <ul className="hero-list">
+            <ol>1. Upload valid prescription</ol>
+            <ol>2. Receive a confirmation</ol>
+            <ol>3. Delivery at your doorstep</ol>
+          </ul>
+        </div>
+      </div>
       <footer className="footer-section">
         <div className="footer-content">
           <img src={health} alt="Heart Care" className="footer-img" />
