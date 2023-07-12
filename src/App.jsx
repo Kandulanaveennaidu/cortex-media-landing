@@ -130,16 +130,46 @@ const App = () => {
       </div>
       <footer className="footer-section">
         <div className="footer-content">
-          <img src={health} alt="Heart Care" className="footer-img" />
-          <img src={hero} alt="Lung Care" className="footer-img" />
-          <img src={Lung} alt="Stomach Care" className="footer-img" />
-          <img src={stomach} alt="Eye Care" className="footer-img" />
-          <img src={eye} alt="Nose Care" className="footer-img" />
-          <img src={nose} alt="Car Care" className="footer-img" />
-          <img src={ear} alt="Dental Care" className="footer-img" />
-          <img src={dental} alt="Muscle Care" className="footer-img" />
-          <img src={muscle} alt="Liver Care" className="footer-img" />
-          <img src={liver} alt="Brain Care" className="footer-img" />
+          <span>
+            <img src={health} alt="Heart Care" className="footer-img" />
+            Heart Care
+          </span>
+          <span>
+            <img src={hero} alt="Lung Care" className="footer-img" />
+            Lung Care
+          </span>
+          <span>
+            <img src={Lung} alt="Stomach Care" className="footer-img" />
+            Stomach Care
+          </span>
+          <span>
+            <img src={stomach} alt="Eye Care" className="footer-img" />
+            Eye Care
+          </span>
+          <span>
+            <img src={eye} alt="Nose Care" className="footer-img" />
+            Nose Care
+          </span>
+          <span>
+            <img src={nose} alt="Car Care" className="footer-img" />
+            Ear Care
+          </span>
+          <span>
+            <img src={ear} alt="Dental Care" className="footer-img" />
+            Dental
+          </span>
+          <span>
+            <img src={dental} alt="Muscle Care" className="footer-img" />
+            Muscle Care
+          </span>
+          <span>
+            <img src={muscle} alt="Liver Care" className="footer-img" />
+            Liver Care
+          </span>
+          <span>
+            <img src={liver} alt="Brain Care" className="footer-img" />
+            Brain care
+          </span>
         </div>
       </footer>
     </div>
