@@ -32,19 +32,13 @@ body {
 .header-text {
   font-size: 18px;
   margin: 0;
-
   padding: 10px;
-}
-
-.icons img {
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
 }
 
 .logo-heading {
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .logo {
@@ -175,4 +169,50 @@ body {
 
 .div {
   background-color: rgba(255, 174, 0, 0.715);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons-styles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: -10px;
+  background-color: #ffffff;
+}
+
+.icon-label {
+  color: white;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.heart-img {
+  margin-left: 10px;
+}
+
+.profile-img {
+  margin-left: 10px;
+}
+
+.app-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+}
+
+.fa-download {
+  color: white;
 }

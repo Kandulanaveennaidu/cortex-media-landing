@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiDownload, FiHeart, FiShoppingCart, FiUser } from "react-icons/fi";
+import { FiHeart, FiShoppingCart, FiUser, FiSmartphone } from "react-icons/fi";
 import {
   FormControl,
   InputLabel,
@@ -8,6 +8,8 @@ import {
   TextField,
   Button,
 } from "@mui/material";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./App.css";
 import logo from "./assets/MEDDTODAY@2x.png";
 import health from "./assets/954528 (1)@2x.png";
@@ -49,10 +51,17 @@ const App = () => {
               <span>Need Help ?</span>
             </h1>
             <div className="icons">
-              <FiDownload className="app-img" />
-              <FiHeart className="heart-img" />
-              <FiShoppingCart className="profile-img" />
-              <FiUser className="profile-img" />
+              <div className="icons-styles">
+                <span className="style">
+                  <span className="app-img icon">
+                    <FiSmartphone className="mobile-app-img icon" />
+                  </span>
+                  <span className="icon-label">ORDER WITH PRESCRIPTION</span>
+                </span>
+                <FiHeart className="heart-img icon" />
+                <FiShoppingCart className="profile-img icon" />
+                <FiUser className="profile-img icon" />
+              </div>
             </div>
           </div>
         </div>
@@ -113,20 +122,48 @@ const App = () => {
         </div>
       </header>
       <div className="hero-section">
-        <img src={hero1} alt="Image" className="hero-image" />
-        <div className="hero-text">
-          <h3>
-            <span>FLAT 25% OFF</span>
-          </h3>
-          <h3>
-            <span>on MEDICINE order</span>
-          </h3>
-          <ul className="hero-list">
-            <ol>1. Upload valid prescription</ol>
-            <ol>2. Receive a confirmation</ol>
-            <ol>3. Delivery at your doorstep</ol>
-          </ul>
-        </div>
+        <Carousel
+          showArrows={true}
+          showStatus={false}
+          showThumbs={false}
+          infiniteLoop={true}
+          autoPlay={true}
+          interval={5000}
+        >
+          <div>
+            <img src={hero1} alt="Image 1" className="hero-image" />
+            <div className="hero-text">
+              <h3>
+                <span>FLAT 25% OFF</span>
+              </h3>
+              <h3>
+                <span>on MEDICINE order</span>
+              </h3>
+              <ul className="hero-list">
+                <li>1. Upload valid prescription</li>
+                <li>2. Receive a confirmation</li>
+                <li>3. Delivery at your doorstep</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <img src={hero1} alt="Image 2" className="hero-image" />
+            <div className="hero-text">
+              <h3>
+                <span>Discounts on all</span>
+              </h3>
+              <h3>
+                <span>healthcare products</span>
+              </h3>
+              <ul className="hero-list">
+                <li>1. Browse our wide range of products</li>
+                <li>2. Add to cart and proceed to checkout</li>
+                <li>3. Enjoy great discounts on your purchase</li>
+              </ul>
+            </div>
+          </div>
+          {/* Add more carousel items as needed */}
+        </Carousel>
       </div>
       <footer className="footer-section">
         <div className="footer-content">
