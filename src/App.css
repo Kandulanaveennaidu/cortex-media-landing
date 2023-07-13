@@ -1,6 +1,6 @@
 * {
-  margin: 5px;
-  padding: 5px;
+  margin: 1px;
+  padding: 1px;
 }
 
 body {
@@ -13,14 +13,14 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0px;
 }
 
 .header-section {
   background-color: #ffffff;
-  padding: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 5px;
+  margin: px;
+  padding: 0px;
 }
 
 .header-content {
